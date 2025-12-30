@@ -1,0 +1,320 @@
+/* ========== SIDEBAR LAYOUT ========== */
+.sidebar {
+  height: 100vh;
+  background-color: #f7f8fa;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #e5e7eb;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 72px;
+}
+
+.sidebar.extended {
+  width: 260px;
+}
+
+/* ========== TOP SECTION ========== */
+.top {
+  padding: 16px;
+}
+
+.top.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Menu Icon */
+.menu {
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.menu img {
+  width: 24px;
+}
+
+/* New Chat */
+.new-chat {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #e9eef6;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.new-chat:hover {
+  background-color: #dde6f3;
+}
+
+.new-chat img {
+  width: 22px;
+}
+
+/* ========== RECENT ========== */
+.recent {
+  margin-top: 24px;
+}
+
+.recent-title {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.recent-entry {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.recent-entry:hover {
+  background-color: #eef2f7;
+}
+
+.recent-entry img {
+  width: 20px;
+}
+
+.recent-entry-p {
+  font-size: 14px;
+  color: #374151;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ========== BOTTOM SECTION ========== */
+.bottom {
+  padding: 16px;
+}
+
+.bottom.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottom-item {
+  margin-bottom: 12px;
+}
+
+/* Fade text */
+.fade {
+  transition: opacity 0.2s;
+}
+
+.block {
+  display: block;
+}
+
+.none {
+  display: none;
+}
+
+/* ========== MODAL OVERLAY ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* ========== MODAL CONTENT ========== */
+.modal-content {
+  width: 520px;
+  max-height: 80vh;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow-y: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Variants */
+.activity-modal {
+  width: 540px;
+}
+
+.settings-modal {
+  width: 560px;
+}
+
+/* ========== MODAL HEADER ========== */
+.modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* ========== MODAL BODY ========== */
+.modal-body {
+  padding: 20px;
+}
+
+/* Help Sections */
+.help-section {
+  margin-bottom: 20px;
+}
+
+.help-section h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.help-section ul {
+  padding-left: 18px;
+}
+
+.help-section li {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.contact-info {
+  font-size: 14px;
+  color: #4b5563;
+}
+
+/* ========== ACTIVITY ========== */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.activity-item:hover {
+  background-color: #f3f4f6;
+}
+
+.activity-icon img {
+  width: 22px;
+}
+
+.activity-prompt {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.activity-time {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.no-activity {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.no-activity-icon {
+  width: 40px;
+  margin-bottom: 12px;
+}
+
+/* ========== SETTINGS ========== */
+.settings-section {
+  margin-bottom: 24px;
+}
+
+.setting-item {
+  margin-top: 12px;
+}
+
+.setting-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.setting-label-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.setting-title {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.setting-description {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.setting-checkbox {
+  width: 18px;
+  height: 18px;
+}
+
+.setting-select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+/* Danger */
+.danger-btn {
+  background: #ef4444;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.danger-btn:hover {
+  background: #dc2626;
+}
+
+.danger-warning {
+  font-size: 12px;
+  color: #b91c1c;
+  margin-top: 6px;
+}
+
+/* About */
+.about-info p {
+  font-size: 14px;
+  color: #374151;
+  margin-bottom: 4px;
+}
